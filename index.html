@@ -11,6 +11,8 @@
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
 
         <nav>
@@ -19,12 +21,15 @@
 
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
 
         </nav>
+
+        <!-- HERO SECTION -->
 
         <div class="hero">
 
@@ -32,63 +37,89 @@
 
             <p>Delicious Meals Crafted For Food Lovers</p>
 
-            <button>Explore Menu</button>
+            <button onclick="document.getElementById('menu').scrollIntoView();">
+                Explore Menu
+            </button>
 
         </div>
 
     </header>
 
-    <section class="menu-section">
+    <!-- MENU SECTION -->
+
+    <section class="menu-section" id="menu">
 
         <h2>Our Special Recipes</h2>
 
         <div class="cards">
 
             <div class="card">
+
                 <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1200&auto=format&fit=crop">
+
                 <h3>Chicken Butter Masala</h3>
+
                 <p>
                     Creamy tomato-based curry cooked with rich butter,
                     fresh cream, and tender chicken pieces.
                 </p>
+
                 <h4>₹280</h4>
+
             </div>
 
             <div class="card">
+
                 <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1200&auto=format&fit=crop">
+
                 <h3>Chicken Biryani</h3>
+
                 <p>
                     Aromatic basmati rice layered with spicy chicken
                     and traditional Indian spices.
                 </p>
+
                 <h4>₹320</h4>
+
             </div>
 
             <div class="card">
+
                 <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop">
+
                 <h3>Chicken Burger</h3>
+
                 <p>
                     Juicy grilled chicken patty with fresh veggies,
                     cheese, and signature sauces.
                 </p>
+
                 <h4>₹220</h4>
+
             </div>
 
             <div class="card">
+
                 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop">
+
                 <h3>Chicken Pizza</h3>
+
                 <p>
                     Crispy pizza topped with spicy chicken chunks,
                     mozzarella cheese, and herbs.
                 </p>
+
                 <h4>₹350</h4>
+
             </div>
 
         </div>
 
     </section>
 
-    <section class="about">
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
 
         <h2>About Hunter's Den</h2>
 
@@ -99,7 +130,9 @@
 
     </section>
 
-    <section class="contact">
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
 
         <h2>Contact Us</h2>
 
@@ -107,9 +140,79 @@
 
         <p>Phone: +91 9876543210</p>
 
-        <p>Location: Kumta, Karnataka</p>
+        <p>Location: Mysuru, Karnataka</p>
+
+        <div class="message-box">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea placeholder="Send Your Message"></textarea>
+
+            <button onclick="sendMessage()">
+                Send Message
+            </button>
+
+        </div>
 
     </section>
+
+    <!-- LOGIN SECTION -->
+
+    <section class="login-section" id="login">
+
+        <!-- LOGIN BOX -->
+
+        <div class="login-box" id="loginBox">
+
+            <h2>Login To Order Food</h2>
+
+            <input type="email" id="email" placeholder="Enter Email">
+
+            <input type="password" id="password" placeholder="Enter Password">
+
+            <button onclick="loginUser()">
+                Login
+            </button>
+
+            <p class="switch-text">
+                Don't have an account?
+                <span onclick="showRegister()">
+                    Register Now
+                </span>
+            </p>
+
+        </div>
+
+        <!-- REGISTER BOX -->
+
+        <div class="login-box" id="registerBox" style="display:none;">
+
+            <h2>Create Account</h2>
+
+            <input type="text" id="name" placeholder="Enter Full Name">
+
+            <input type="email" id="registerEmail" placeholder="Enter Email">
+
+            <input type="password" id="registerPassword" placeholder="Create Password">
+
+            <button onclick="registerUser()">
+                Register
+            </button>
+
+            <p class="switch-text">
+                Already have an account?
+                <span onclick="showLogin()">
+                    Login Now
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
 
     <footer>
 
